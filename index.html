@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebEngage React Demo</title>
+
+    <!-- ================= DEVREV PLuG SDK ================= -->
+    <script>
+      (function (w, d, s, o, f, js, fjs) {
+        w[o] =
+          w[o] ||
+          function () {
+            (w[o].q = w[o].q || []).push(arguments);
+          };
+        js = d.createElement(s);
+        fjs = d.getElementsByTagName(s)[0];
+        js.async = 1;
+        js.src = "https://static.devrev.ai/plug.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(window, document, "script", "devrev");
+
+      // Initialize DevRev (Session Replay enabled by default)
+      devrev("init", {
+        appId:
+          "DvRvStPZG9uOmNvcmU6ZHZydi1pbi0xOmRldm8vMjE4QTZKTUg4QzpwbHVnX3NldHRpbmcvMV9ffHxfXzIwMjUtMTItMTYgMTA6MjM6MzYuMzMxNTEzMDg2ICswMDAwIFVUQw==xlxendsDvRv"
+      });
+    </script>
+    <!-- ================= END DEVREV ================= -->
+  </head>
+
+  <!-- Mask EVERYTHING by default -->
+  <body class="ue-mask">
+    <div id="root"></div>
+
+    <!-- Example elements for session replay control -->
+
+    <!-- Unmasked section -->
+    <div class="ue-unmask">
+      <h1 data-plug-label="Homepage Title">Welcome to Demo Store</h1>
+    </div>
+
+    <!-- Masked input (extra protection) -->
+    <input
+      class="ue-input-mask"
+      type="text"
+      placeholder="Enter email"
+      data-plug-label="Email Input"
+    />
+
+    <!-- Blocked input (not recorded at all) -->
+    <input
+      class="ue-block"
+      type="text"
+      placeholder="Sensitive Token"
+      data-plug-label="Blocked Field"
+    />
+
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
