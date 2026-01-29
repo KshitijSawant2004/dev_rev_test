@@ -13,40 +13,7 @@
       window.__DEVREV_APP_ID =
         "DvRvStPZG9uOmNvcmU6ZHZydi1pbi0xOmRldm8vMjE4QTZKTUg4QzpwbHVnX3NldHRpbmcvMV9ffHxfXzIwMjUtMTItMTYgMTA6MjM6MzYuMzMxNTEzMDg2ICswMDAwIFVUQw==xlxendsDvRv";
     </script>
-    <script>
-      (function () {
-        var SRC = "https://static.devrev.ai/plug.js";
-        var MAX_RETRIES = 1;
-
-        function loadPlug(attempt) {
-          var s = document.createElement("script");
-          s.src = SRC;
-          s.async = true;
-          s.onload = function () {
-            console.log("[DevRev] plug.js loaded");
-          };
-          s.onerror = function () {
-            console.error("[DevRev] plug.js failed to load", {
-              src: SRC,
-              attempt: attempt + 1
-            });
-            if (attempt < MAX_RETRIES) {
-              setTimeout(function () {
-                console.log("[DevRev] retrying plug.js...");
-                loadPlug(attempt + 1);
-              }, 1500);
-            } else {
-              console.error(
-                "[DevRev] plug.js could not be loaded. Common causes: adblock/privacy extensions, CSP blocking static.devrev.ai, or network/DNS."
-              );
-            }
-          };
-          document.head.appendChild(s);
-        }
-
-        loadPlug(0);
-      })();
-    </script>
+    <script async src="https://static.devrev.ai/plug.js"></script>
     <!-- ================= END DEVREV ================= -->
   </head>
 
