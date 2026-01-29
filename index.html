@@ -13,7 +13,12 @@
       window.__DEVREV_APP_ID =
         "DvRvStPZG9uOmNvcmU6ZHZydi1pbi0xOmRldm8vMjE4QTZKTUg4QzpwbHVnX3NldHRpbmcvMV9ffHxfXzIwMjUtMTItMTYgMTA6MjM6MzYuMzMxNTEzMDg2ICswMDAwIFVUQw==xlxendsDvRv";
     </script>
-    <script async src="https://static.devrev.ai/plug.js"></script>
+    <script
+      async
+      src="https://static.devrev.ai/plug.js"
+      onload="console.log('[DevRev] plug.js loaded', { hasPlugSDK: !!window.plugSDK, hasDevrevFn: typeof window.devrev === 'function' });"
+      onerror="console.error('[DevRev] plug.js failed to load. Common causes: adblock/privacy extensions, network/DNS, or CSP blocking static.devrev.ai');"
+    ></script>
     <!-- ================= END DEVREV ================= -->
   </head>
 
