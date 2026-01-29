@@ -21,6 +21,16 @@ function App() {
       page_name: pageName,
       path: location.pathname
     });
+
+    // Also track the page view in DevRev (ties into the session replay timeline).
+    try {
+      window.plugSDK?.trackEvent?.('Page Viewed', {
+        page_name: pageName,
+        path: location.pathname
+      });
+    } catch {
+      // ignore
+    }
   }, [location]);
 
   const getPageName = (path) => {
